@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it">
+<head th:insert="~{/fragments/components :: css}">
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row vh-100">
+        <th:block th:insert="~{/fragments/sidebar :: sidebar}" class="col"></th:block>
+        <div class="col px-0">
+            <h1 class="col text-center bg-info-subtle">Dashboard</h1>
+            <span class="bg-warning w-25 h-50 d-inline-block">pie chart</span>
+            <span class="bg-danger w-25 h-50 d-inline-block">another chart</span>
+            <h4 class="col text-center bg-info-subtle mt-2">Last Expenses</h4>
+            <div class="bg-warning w-100 h-25">table</div>
+        </div>
+    </div>
+</div>
+<th:block th:replace="~{/fragments/components :: scripts}"></th:block>
+</body>
+</html>

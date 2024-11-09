@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Components</title>
+</head>
+<body>
+
+<!-- All the CSS -->
+  <th:block th:fragment="css">
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}"/>
+    <link th:rel="stylesheet" th:href="@{../static/sidebars.css}"/>
+  </th:block>
+
+<!-- Fragment for scripts -->
+  <th:block th:fragment="scripts">
+    <script th:src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+    <script type="text/javascript" th:src="@{../static/sidebars.js}"></script>
+  </th:block>
+
+</body>
+</html>
