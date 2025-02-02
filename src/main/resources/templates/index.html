@@ -10,7 +10,13 @@
         <th:block th:insert="~{/fragments/sidebar :: sidebar}" class="col"></th:block>
         <div class="col px-0">
             <h1 class="col text-center bg-info-subtle">Dashboard</h1>
+            <div>
+                <h2>Expenses Chart</h2>
+                <canvas id="expenseChart" class="w-25 h-50"></canvas>
+            </div>
+<!--
             <span class="bg-warning w-25 h-50 d-inline-block">pie chart</span>
+-->
             <span class="bg-danger w-25 h-50 d-inline-block">another chart</span>
             <h4 class="col text-center bg-info-subtle mt-2">Last Expenses</h4>
             <div class="bg-warning w-100 h-25">table</div>

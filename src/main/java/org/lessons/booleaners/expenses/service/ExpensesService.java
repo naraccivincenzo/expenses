@@ -5,7 +5,9 @@ import org.lessons.booleaners.expenses.repo.ExpensesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ExpensesService {
@@ -41,5 +43,18 @@ public class ExpensesService {
     //Delete the expense with the selected id
     public void deleteById(int id) {
         expensesRepository.deleteById(id);
+    }
+
+    public Map<String, Double> getExpenseSummaryByCategory() {
+        List<Object[]> results = expensesRepository.getExpenseSummaryByCategory();
+        Map<String, Double> summary = new HashMap<>();
+
+        for (Object[] result : results) {
+            String category = (String) result[0]; // Categoria
+            Double total = (Double) result[1];   // Totale per categoria
+            summary.put(category, total);
+        }
+
+        return summary;
     }
 }

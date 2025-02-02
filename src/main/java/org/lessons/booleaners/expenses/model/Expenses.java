@@ -17,19 +17,19 @@ public class Expenses {
     private LocalDate expenseDate;
 
     @NotBlank
-    private String description;
+    private String category;
 
     @NotBlank
-    private int amount;
+    private double amount;
 
     //Getter and Setter
     public int getId() {return id;}
     public void setId(int id) {}
     public LocalDate getExpenseDate() {return expenseDate;}
     public void setExpenseDate(LocalDate expenseDate) {}
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
-    public int getAmount() { return amount; }
-    public void setAmount(int amount) { this.amount = amount; }
+    public String getCategory() { return category; }
+    public void setCategory(String description) { this.category = category; }
+    public double getAmount() { return amount; }
+    public void setAmount(double amount) { this.amount = amount; }
 
 }
